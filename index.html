@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <link href="style/main.css" rel="stylesheet" type="text/css"><link>
+
+    <script src="scripts/utils.js" defer></script>
+    <script src="scripts/stereo_buffer.js" defer></script>
+    <script src="scripts/recording.js" defer></script>
+    <script src="scripts/canvas.js" defer></script>
+    <script src="scripts/audio.js" defer></script>
+    <script src="scripts/reconstruct.js" defer></script>
+    <script src="scripts/replay.js" defer></script>
+    <script src="scripts/main.js" defer></script>
+  </head>
+
+  <body>
+    <button onclick="start()">Start Recording</button>
+    <button onclick="stop()">Stop Recording</button>
+    <input type="file" onchange="load(this)"></input>
+    <button onclick="save()">Save</button>
+
+    <button onclick="rebuild()">Reconstruct</button>
+    <button onclick="replay()">Replay</button>
+    <button onclick="startReplaySound()">Play Sound</button>
+    <button onclick="stopReplaySound()">Stop Sound</button>
+
+    <button onclick="zoomIn()">Zoom in</button>
+    <button onclick="zoomOut()">Zoom out</button>
+    <button onclick="resetZoom()">Reset Zoom</button>
+
+    <br>
+    <canvas id="source-canvas-0"></canvas>
+    <br>
+    <canvas id="source-canvas-1"></canvas>
+    <br>
+    <canvas id="reconstruct-canvas-0"></canvas>
+    <br>
+    <canvas id="reconstruct-canvas-1"></canvas>
+    <br>
+    <canvas id="replay-canvas-0"></canvas>
+    <br>
+    <canvas id="replay-canvas-1"></canvas>
+  </body>
+</html>
